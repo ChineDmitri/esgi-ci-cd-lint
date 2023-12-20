@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: ls -l 
-      - run: cat README.md
+      - run: cat ./../README.md
