@@ -6,10 +6,5 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: action/checkout@v4
-        with:
-          repository: GALLIC-A/esgi-ci-cd
-          sparse-checkout: |
-            README.md
-          sparse-checkout-cone-mode: false
       - run: ls -l 
       - run: cat README.md
