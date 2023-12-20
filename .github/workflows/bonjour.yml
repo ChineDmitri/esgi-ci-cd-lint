@@ -6,5 +6,6 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+      - run: sudo apt-get install -y cowsay
       - run: ls -l 
       - run: cat README.md | cowsay
