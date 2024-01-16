@@ -11,3 +11,17 @@ jobs:
           node-version: 19
       - run: npm install
       - run: npm run lint
+lint:
+  hadolinter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v1
+
+      - name: Install hadolint
+        run: |
+          docker run --rm -i hadolint/hadolint:latest < Dockerfile
